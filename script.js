@@ -1,4 +1,4 @@
-const eventDate=new Date("2026-10-16T15:00:00+03:00");
+const eventDate=new Date("2026-10-16T15:00:00+04:00");
 const pad=n=>String(n).padStart(2,"0");
 function tick(){let d=eventDate-new Date();if(d<0)d=0;document.querySelector("#days").textContent=Math.floor(d/86400000);document.querySelector("#hours").textContent=pad(Math.floor(d/3600000)%24);document.querySelector("#minutes").textContent=pad(Math.floor(d/60000)%60);document.querySelector("#seconds").textContent=pad(Math.floor(d/1000)%60)}tick();setInterval(tick,1000);
 window.addEventListener("load",()=>{setTimeout(()=>document.querySelector("#preloader").classList.add("hide"),650)});
